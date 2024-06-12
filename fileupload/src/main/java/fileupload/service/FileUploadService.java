@@ -44,9 +44,8 @@ public class FileUploadService {
             os.close();
             
             url = URL_PATH  +"/" + saveFilename;
+ 
             
-
-          
 
         } catch (IOException ex) {
             throw new RuntimeException(ex);
