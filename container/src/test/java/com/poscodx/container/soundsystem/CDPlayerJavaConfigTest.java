@@ -13,21 +13,18 @@ import com.poscodx.container.config.soundsystem.CDPlayerConfig;
 
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes= {CDPlayerConfig.class})
+@ContextConfiguration(classes={CDPlayerConfig.class})
 public class CDPlayerJavaConfigTest {
-
 	@Autowired
-	CDPlayer cdPlayer;
+	private CDPlayer cdPlayer;
 	
-	  @Test
-	  public void testCDPlayNotNull() {
-		  assertNotNull(cdPlayer);
-	  }
+	@Test
+	public void testCDPlayNotNull() {
+		assertNotNull(cdPlayer);
+	}
 	
-	  @Test
-	  public void testPlay() {
-		assertEquals("Playing 붕붕 by 김하온",  cdPlayer.play());
-	  }
-	  
-	
+	@Test
+	public void testPlay() {
+		assertEquals("Playing 붕붕 by 김하온", cdPlayer.play());
+	}
 }

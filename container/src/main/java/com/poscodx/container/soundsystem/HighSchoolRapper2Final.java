@@ -10,9 +10,7 @@ public class HighSchoolRapper2Final implements CompactDisc {
 	
 	@Override
 	public String play() {
-		return "Playing " + title + "by " + artist;
+		return "Playing " + title + " by " + artist;
 	}
 	
-	
-    
 }
