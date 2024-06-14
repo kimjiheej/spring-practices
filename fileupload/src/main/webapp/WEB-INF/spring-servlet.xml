@@ -20,6 +20,19 @@
  
 </bean>
 
+<mvc:annotation-driven>
+ <!--  MessageConverters -->
+ <mvc:message-converters>
+   <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+    <property name="supportedMediaTypes">
+        <list>
+             <value>text/html; charset=UTF-8</value>
+        </list>
+    </property>
+</bean>
+ </mvc:message-converters>
+ 
+</mvc:annotation-driven>
   <!-- Multipart Resolver -->
 <bean id="multipartResolver" 
        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

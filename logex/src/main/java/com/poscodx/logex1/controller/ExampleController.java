@@ -32,6 +32,8 @@ public class ExampleController {
 		 *     직접 테스트 해 보세요.
 		 *  
 		 */
+		
+		// 콘솔로 나오게 된다 
 		LOG.debug( "#ex1 - debug log" );
 		LOG.info( "#ex1 - info log" );
 		LOG.warn( "#ex1 - warn log" );
