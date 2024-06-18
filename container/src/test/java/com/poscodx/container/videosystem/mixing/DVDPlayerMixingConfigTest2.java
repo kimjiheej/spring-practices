@@ -13,16 +13,13 @@ import com.poscodx.container.config.videosystem.mixing.VideoSystemConfig;
 import com.poscodx.container.videosystem.DVDPlayer;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes= {VideoSystemConfig.class})
+@ContextConfiguration(classes={VideoSystemConfig.class})
 public class DVDPlayerMixingConfigTest2 {
-
+	@Autowired
+	private DVDPlayer dvdPlayer;
 	
-	@Autowired 
-	private DVDPlayer dvdPlayer; 
-	
+	@Test
 	public void testPlay() {
-		assertTrue(1-1 ==0)
-		assertEquals("Player Movie Marvel's ", dvdPlayer.play());
+		assertEquals("Playing Movie Marvel's Avengers", dvdPlayer.play());
 	}
-	
 }

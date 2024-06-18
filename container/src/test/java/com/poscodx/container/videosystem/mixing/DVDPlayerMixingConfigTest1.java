@@ -3,6 +3,7 @@ package com.poscodx.container.videosystem.mixing;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -12,16 +13,13 @@ import com.poscodx.container.config.videosystem.DVDPlayerConfig;
 import com.poscodx.container.videosystem.DVDPlayer;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes= {DVDPlayerConfig.class})
+@ContextConfiguration(classes={DVDPlayerConfig.class})
 public class DVDPlayerMixingConfigTest1 {
-
+	@Autowired
+	private DVDPlayer dvdPlayer;
 	
-	@Autowired 
-	private DVDPlayer dvdPlayer; 
-	
+	@Test
 	public void testPlay() {
-		assertTrue(1-1 ==0)
-		assertEquals("Player Movie Marvel's ", dvdPlayer.play());
+		assertEquals("Playing Movie Marvel's Avengers", dvdPlayer.play());
 	}
-	
 }
